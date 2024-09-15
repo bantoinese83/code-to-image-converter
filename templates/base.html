@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Code to Image Converter{% endblock %}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<div class="wrapper">
+    <header class="hero is-primary">
+        <div class="hero-body" style="display: flex; align-items: center;">
+            <svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#ff7e5f;stop-opacity:1"></stop>
+                        <stop offset="100%" style="stop-color:#feb47b;stop-opacity:1"></stop>
+                    </linearGradient>
+                </defs>
+                <circle cx="50" cy="50" r="45" stroke="#fff" stroke-width="5" fill="url(#grad1)"></circle>
+                <path d="M 30 50 L 50 30 L 70 50 L 50 70 Z" fill="#fff"></path>
+                <text x="50" y="90" font-family="Roboto" font-size="12" fill="#fff" text-anchor="middle" style="text-shadow: 1px 1px 2px #000;"></text>
+            </svg>
+            <h1 class="title" style="margin-left: 20px; color: #fff; text-shadow: 1px 1px 2px #000;">{% block header %}BaseLabs{% endblock %}</h1>
+        </div>
+    </header>
+    <main class="section">
+        {% block content %}{% endblock %}
+    </main>
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>{% block footer %}© 2024 Code to Image Converter{% endblock %}</p>
+        </div>
+    </footer>
+</div>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

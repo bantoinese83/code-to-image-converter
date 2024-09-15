@@ -1,0 +1,184 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container">
+        <h1 class="title"><i class=""></i> Code to Image Converter</h1>
+        <form id="convert-form">
+            <div class="field">
+                <label class="label" for="code">Code:</label>
+                <div class="control">
+                    <textarea class="textarea" id="code" name="code" placeholder="Enter your code here..."></textarea>
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Language:</label>
+                <div class="control">
+                    <div class="select">
+                        <label for="language"></label><select id="language" name="language">
+                            <option value="python">Python</option>
+                            <option value="javascript">JavaScript</option>
+                            <option value="java">Java</option>
+                            <option value="html">HTML</option>
+                            <option value="css">CSS</option>
+                            <option value="cpp">C++</option>
+                            <option value="csharp">C#</option>
+                            <option value="php">PHP</option>
+                            <option value="ruby">Ruby</option>
+                            <option value="go">Go</option>
+                            <option value="kotlin">Kotlin</option>
+                            <option value="swift">Swift</option>
+                            <option value="rust">Rust</option>
+                            <option value="typescript">TypeScript</option>
+                            <option value="sql">SQL</option>
+                            <option value="bash">Bash</option>
+                            <option value="json">JSON</option>
+                            <option value="xml">XML</option>
+                            <option value="yaml">YAML</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Style:</label>
+                <div class="control">
+                    <div class="select">
+                        <label for="style"></label><select id="style" name="style">
+                            <option value="dracula">Dracula</option>
+                            <option value="a11y-dark">A11y Dark</option>
+                            <option value="androidstudio">Android Studio</option>
+                            <option value="xcode">XCode</option>
+                            <option value="atom-one-dark">Atom One Dark</option>
+                            <option value="github">GitHub</option>
+                            <option value="googlecode">Google Code</option>
+                            <option value="intellij">IntelliJ</option>
+                            <option value="monokai">Monokai</option>
+                            <option value="nightowl">Night Owl</option>
+                            <option value="nord">Nord</option>
+                            <option value="stackoverflow">Stack Overflow</option>
+                            <option value="vs">Visual Studio</option>
+                            <option value="vs-dark">Visual Studio Dark</option>
+                            <option value="manni">Manni</option>
+                            <option value="default">Default</option>
+                            <option value="solarized-dark">Solarized Dark</option>
+                            <option value="solarized-light">Solarized Light</option>
+                            <option value="friendly">Friendly</option>
+                            <option value="paraiso-dark">Paraiso Dark</option>
+                            <option value="paraiso-light">Paraiso Light</option>
+                            <option value="zenburn">Zenburn</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Font Family:</label>
+                <div class="control">
+                    <div class="select">
+                        <label for="font-family"></label><select id="font-family" name="font-family">
+                            <option value="Roboto Mono">Roboto Mono</option>
+                            <option value="Space Mono">Space Mono</option>
+                            <option value="PT Mono">PT Mono</option>
+                            <option value="Source Code Pro">Source Code Pro</option>
+                            <option value="Fira Code">Fira Code</option>
+                            <option value="Inconsolata">Inconsolata</option>
+                            <option value="JetBrains Mono">JetBrains Mono</option>
+                            <option value="Ubuntu Mono">Ubuntu Mono</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="field is-horizontal">
+                <div class="field-body">
+                    <div class="field">
+                        <label class="label" for="font-size">Font Size:</label>
+                        <div class="control">
+                            <input class="input" type="number" id="font-size" name="font-size" value="16" min="8" max="72" step="1">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label" for="tab-size">Tab Size:</label>
+                        <div class="control">
+                            <input class="input" type="number" id="tab-size" name="tab-size" value="2" min="1" max="8" step="1">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="field is-horizontal">
+                <div class="field-body">
+                    <div class="field">
+                        <label class="label">Shadow:</label>
+                        <div class="control">
+                            <div class="select">
+                                <label for="shadow"></label><select id="shadow" name="shadow">
+                                    <option value="none">None</option>
+                                    <option value="low">Low</option>
+                                    <option value="medium">Medium</option>
+                                    <option value="high">High</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Image Quality:</label>
+                        <div class="control">
+                            <div class="select">
+                                <label for="image-quality"></label><select id="image-quality" name="image-quality">
+                                    <option value="low">Low</option>
+                                    <option value="medium">Medium</option>
+                                    <option value="high">High</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="field is-horizontal">
+                <div class="field-body">
+                    <div class="field">
+                        <label class="label" for="padding">Padding:</label>
+                        <div class="control">
+                            <input class="input" type="number" id="padding" name="padding" value="72" min="0" max="200" step="1">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Line Numbers:</label>
+                        <div class="control">
+                            <div class="select">
+                                <label for="line-numbers"></label><select id="line-numbers" name="line-numbers">
+                                    <option value="true">Yes</option>
+                                    <option value="false">No</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="field">
+                <label class="label" for="watermark">Watermark:</label>
+                <div class="control">
+                    <input class="input" type="text" id="watermark" name="watermark" placeholder="Enter watermark text...">
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Layout:</label>
+                <div class="control">
+                    <div class="select">
+                        <label for="layout"></label><select id="layout" name="layout">
+                            <option value="wide">Wide</option>
+                            <option value="compact">Compact</option>
+                            <option value="square">Square</option>
+                            <option value="fullscreen">Fullscreen Preview</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="control">
+                <button class="button is-primary" type="submit"><i class="fas fa-sync-alt"></i> Convert</button>
+            </div>
+        </form>
+        <div id="image-container" class="section"></div>
+        <button id="fullscreen-btn" class="button is-primary"><i class="fas fa-expand"></i> Fullscreen</button>
+        <button id="share-btn" class="button is-info"><i class="fas fa-share"></i> Share</button>
+        <button id="fav-btn" class="button is-warning"><i class="fas fa-star"></i> Add to Favs</button>
+        <button id="report-btn" class="button is-danger"><i class="fas fa-bug"></i> Report Bug</button>
+    </div>
+{% endblock %}

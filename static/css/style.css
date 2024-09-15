@@ -1,0 +1,129 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Header and Footer */
+.hero.is-primary {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+}
+
+.footer {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+}
+
+/* Main Section */
+main.section {
+    background: linear-gradient(135deg, #fdfbfb, #ebedee);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Buttons */
+.button.is-primary {
+    background-color: #ff7e5f;
+    border-color: #ff7e5f;
+    color: white;
+    margin: 10px; /* Add margin */
+    padding: 10px 20px; /* Add padding */
+}
+
+.button.is-primary:hover {
+    background-color: #feb47b;
+    border-color: #feb47b;
+}
+/* Buttons */
+.button.is-info {
+    background-color: #209cee;
+    border-color: #209cee;
+    color: white;
+    margin: 10px;
+    padding: 10px 20px;
+}
+
+.button.is-warning {
+    background-color: #ffdd57;
+    border-color: #ffdd57;
+    color: white;
+    margin: 10px;
+    padding: 10px 20px;
+}
+
+.button.is-danger {
+    background-color: #ff3860;
+    border-color: #ff3860;
+    color: white;
+    margin: 10px;
+    padding: 10px 20px;
+}
+/* Form Elements */
+textarea.textarea, select.select, input.input {
+    border-color: #ff7e5f;
+}
+
+textarea.textarea:focus, select.select:focus, input.input:focus {
+    border-color: #feb47b;
+    box-shadow: 0 0 0 0.125em rgba(255, 126, 95, 0.25);
+}
+
+/* Image Container */
+#image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #ccc;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    overflow-x: auto;
+}
+
+/* Highlighted Code */
+.highlight pre {
+    background: #282a36; /* Dracula background */
+    color: #f8f8f2; /* Dracula foreground */
+    padding: 10px;
+    border-radius: 5px;
+    font-family: monospace;
+}
+
+/* Style for all spans within highlighted code */
+.highlight span {
+    color: #f8f8f2; /* Default text color */
+}
+/* Footer */
+.footer {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: white; /* White text color */
+    padding: 20px; /* Padding for spacing */
+    text-align: center; /* Center-align text */
+    border-top: 2px solid #ff7e5f; /* Optional: Add a top border for separation */
+}
+/* Example styles for different token types */
+.highlight .keyword { color: #ff79c6; }
+.highlight .string { color: #f1fa8c; }
+.highlight .comment { color: #6272a4; }
+.highlight .number { color: #bd93f9; }
+.highlight .function { color: #50fa7b; }
+.highlight .class { color: #ffb86c; }
+.highlight .tag { color: #ff79c6; }
+.highlight .attr { color: #50fa7b; }
+.highlight .punctuation { color: #f8f8f2; }
+.highlight .operator { color: #ff79c6; }
+.highlight .boolean { color: #bd93f9; }
+.highlight .variable { color: #f8f8f2; }
+.highlight .property { color: #50fa7b; }
+.highlight .regex { color: #ffb86c; }
+.highlight .constant { color: #bd93f9; }
+.highlight .symbol { color: #ff79c6; }
+.highlight .builtin { color: #50fa7b; }
+.highlight .char { color: #f1fa8c; }
+.highlight .parameter { color: #f8f8f2; }
+.highlight .interpolation { color: #f8f8f2; }
